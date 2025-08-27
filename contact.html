@@ -1,0 +1,22 @@
+<section id="contact" style="padding: 40px; background:  #27ae60;; font-family: sans-serif;">
+  <h2 style="color: white;">📬 Contact Us</h2>
+  <form style="max-width: 500px; color: white; margin-top: 20px;" onsubmit="return validateForm()">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br />
+
+    <label for="message">Message:</label><br />
+    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br />
+
+    <button type="submit" style="background:  #27ae60; color: white; border: none; padding: 10px 20px; cursor: pointer;">Send</button>
+  </form>
+</section>
+
+<script>
+  function validateForm() {
+    alert("Message sent successfully!");
+    return false; // Remove this line when connecting to a backend
+  }
+</script>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yummy Recipes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      background: #ff6f61;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .recipe {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .recipe:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .recipe h3 {
+      margin: 0 0 10px;
+    }
+    .recipe p {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Yummy Recipes</h1>
+    <p>Discover delicious and easy-to-make meals</p>
+  </header>
+
+  <div class="container">
+    <div class="search-bar">
+
+<input type="text" id="searchInput" placeholder="Search for a recipe..." oninput="filterRecipes()">
+    </div>
+
+    <div id="recipeList">
+      <!-- Recipes will be inserted here -->
+    </div>
+  </div>
+
+  <script>
+    const recipes = [
+      {
+        title: "Spaghetti Bolognese",
+        description: "A classic Italian pasta dish with rich, meaty sauce."
+      },
+      {
+        title: "Green Veggie Pasta",
+        description: "Pasta tossed in a creamy green sauce with fresh vegetables."
+      },
+      {
+        title: "Jollof Rice",
+        description: "A West African favorite made with rice, tomato, and spices."
+      },
+      {
+        title: "Chicken Stir Fry",
+        description: "Quick and healthy chicken with colorful vegetables and soy sauce."
+      }
+    ];
+
+    function displayRecipes(filtered = recipes) {
+      const container = document.getElementById("recipeList");
+      container.innerHTML = "";
+      filtered.forEach(recipe => {
+        const div = document.createElement("div");
+        div.className = "recipe";
+        div.innerHTML = <h3>recipe.title</h3><p>{recipe.description}</p>;
+        container.appendChild(div);
+      });
+    }
+
+    function filterRecipes() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+
+const filtered = recipes.filter(r => r.title.toLowerCase().includes(input));
+      displayRecipes(filtered);
+    }
+
+    displayRecipes();
+  </script>
+
+</body>
+</html>

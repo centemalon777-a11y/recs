@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bible Study Hub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #2e3b55;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #4a5a78;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #364259;
+    }
+    main {
+      padding: 20px;
+    }
+    .section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2e3b55;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bible Study Hub</h1>
+  <p>Grow in the Word Daily</p>
+</header>
+
+<nav>
+  <a href="#devotion">Daily Devotion</a>
+  <a href="#verse">Verse of the Day</a>
+  <a href="#quiz">Bible Quiz</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section id="devotion" class="section">
+    <h2>Daily Devotion</h2>
+    <p>“Trust in the Lord with all your heart and lean not on your own understanding.” — Proverbs 3:5</p>
+  </section>
+
+  <section id="verse" class="section">
+    <h2>Verse of the Day</h2>
+    <button onclick="showVerse()">Get Verse</button>
+    <p id="verseText"></p>
+  </section>
+
+  <section id="quiz" class="section">
+    <h2>Bible Quiz</h2>
+    <p><strong>Question:</strong> Who led the Israelites out of Egypt?</p>
+    <ul>
+      <li>A. Abraham</li>
+      <li>B. David</li>
+      <li>C. Moses</li>
+      <li>D. Paul</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br><br>
+      <input type="email" placeholder="Your Email" required><br><br>
+      <textarea placeholder="Your Message" rows="4" required></textarea><br><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Bible Study Hub. All rights reserved.
+</footer>
+
+<script>
+  function showVerse() {
+    const verses = [
+      "Psalm 119:105 - Your word is a lamp to my feet and a light to my path.",
+      "John 3:16 - For God so loved the world...",
+      "Romans 8:28 - All things work together for good..."
+    ];
+
+const randomVerse = verses[Math.floor(Math.random() * verses.length)];
+    document.getElementById("verseText").textContent = randomVerse;
+  }
+</script>
+
+<a href="#">Devotions</a>
+    <a href="#">Quiz</a>
+    <a href="#">Topics</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to Bible Study Hub</h1>
+    <p>Daily encouragements, scriptures, and faith-building tools for your journey with God.</p>
+  </div>
+
+  <div class="section">
+    <h2>Verse of the Day</h2>
+    <p><em>“Trust in the Lord with all your heart and lean not on your own understanding.”</em> – Proverbs 3:5</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Bible Study Hub. All rights reserved.
+  </footer>
+
+</body>
+</html>

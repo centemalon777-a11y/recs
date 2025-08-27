@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JobBoard Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 5px;
+    }
+
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .job {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .job h3 {
+      margin: 0;
+    }
+
+    .job p {
+      margin: 5px 0;
+    }
+
+    button {
+      background: #004aad;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    button:hover {
+      background: #003380;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JobBoard Hub</h1>
+
+<p>Find the latest jobs in your area</p>
+  </header>
+
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search jobs by title or location..." onkeyup="filterJobs()"/>
+    </div>
+
+    <div id="jobList">
+      <div class="job">
+        <h3>Frontend Developer</h3>
+        <p>Company: TechSolve</p>
+        <p>Location: Remote</p>
+        <p>Type: Full-Time</p>
+        <button>Apply</button>
+      </div>
+
+      <div class="job">
+        <h3>Customer Support Intern</h3>
+        <p>Company: EasyPay</p>
+        <p>Location: Lagos</p>
+        <p>Type: Internship</p>
+        <button>Apply</button>
+      </div>
+
+      <div class="job">
+        <h3>Data Analyst</h3>
+        <p>Company: Insight Labs</p>
+        <p>Location: Abuja</p>
+        <p>Type: Contract</p>
+        <button>Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterJobs() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const jobs = document.querySelectorAll('.job');
+      jobs.forEach(job => {
+        const text = job.innerText.toLowerCase();
+        job.style.display = text.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindEase - Mental Wellness</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #4a90e2;
+    }
+    input, select, button {
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #357abd;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MindEase</h1>
+  <p>Your daily mental wellness companion</p>
+</header>
+
+<main>
+  <section>
+    <h2>Track Your Mood</h2>
+    <label for="mood">How are you feeling today?</label>
+    <select id="mood">
+      <option value="">Select your mood</option>
+      <option>😊 Happy</option>
+      <option>😐 Okay</option>
+      <option>😟 Anxious</option>
+      <option>😢 Sad</option>
+      <option>😠 Frustrated</option>
+    </select>
+    <button onclick="saveMood()">Submit</button>
+    <p id="moodResult"></p>
+  </section>
+
+  <section>
+    <h2>Daily Tip</h2>
+    <p id="tip">Click below to get a wellness tip.</p>
+    <button onclick="showTip()">Show Tip</button>
+  </section>
+
+  <section>
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://www.betterhelp.com" target="_blank">BetterHelp - Online Therapy</a></li>
+      <li><a href="https://www.headspace.com" target="_blank">Headspace - Meditation & Sleep</a></li>
+      <li><a href="https://www.mentalhealth.org.uk/" target="_blank">Mental Health Foundation</a></li>
+    </ul>
+  </section>
+</main>
+
+<script>
+  function saveMood() {
+    const mood = document.getElementById('mood').value;
+    const result = document.getElementById('moodResult');
+    if (mood) {
+      result.textContent = Mood saved: ${mood}
+    } else {
+      result.textContent = "Please select your mood.";
+    }
+  }
+
+  const tips = [
+    "Take a 5-minute break every hour.",
+    "Breathe deeply for 60 seconds.",
+    "Drink water and stay hydrated.",
+    "Talk to someone you trust.",
+    "Write down three things you're grateful for."
+  ];
+
+  function showTip() {
+    const tip = tips[Math.floor(Math.random() * tips.length)];
+    document.getElementById('tip').textContent = tip;
+  }
+</script>
+
+</body>
+</html>

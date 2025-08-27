@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SecureBank</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #0055a5;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      padding: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SecureBank</h1>
+
+<p>Safe. Simple. Secure.</p>
+  </header>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#accounts">Accounts</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="card">
+      <h3>Online Banking</h3>
+      <p>Access your account 24/7 from anywhere in the world.</p>
+    </div>
+    <div class="card">
+      <h3>Loans & Credit</h3>
+      <p>Apply for personal, home or car loans with low interest.</p>
+    </div>
+  </section>
+
+  <section class="section" id="accounts">
+    <h2>Open an Account</h2>
+    <div class="card">
+      <p>Join us today and enjoy fast and secure banking services.</p>
+      <button onclick="openAccount()">Apply Now</button>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="card">
+      <p>Email: support@securebank.com</p>
+      <p>Phone: +123-456-7890</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SecureBank. All rights reserved.
+  </footer>
+
+  <script>
+    function openAccount() {
+      alert("Account application coming soon.");
+    }
+  </script>
+
+</body>
+</html>

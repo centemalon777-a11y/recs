@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delish Restaurant</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
+    header { background: #c0392b; color: #fff; padding: 20px; text-align: center; }
+    nav { background: #e74c3c; padding: 10px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .hero { background: url('https://source.unsplash.com/1600x600/?restaurant,food') no-repeat center/cover; height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2em; text-shadow: 2px 2px 5px black; }
+    .section { padding: 40px 20px; text-align: center; }
+    .menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .menu-item { width: 250px; border: 1px solid #ccc; border-radius: 8px; padding: 15px; }
+    .menu-item img { width: 100%; border-radius: 5px; }
+
+footer { background: #c0392b; color: #fff; text-align: center; padding: 15px; }
+    @media(max-width: 768px) {
+      .menu { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Delish Restaurant</h1>
+  <p>Where Taste Meets Perfection</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  Welcome to Delish
+</div>
+
+<section class="section" id="menu">
+  <h2>Our Menu</h2>
+  <div class="menu">
+    <div class="menu-item">
+      <img src="https://source.unsplash.com/250x150/?burger" alt="Burger">
+      <h3>Classic Burger</h3>
+      <p>8.99</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://source.unsplash.com/250x150/?pizza" alt="Pizza">
+      <h3>Italian Pizza</h3>
+      <p>10.99</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://source.unsplash.com/250x150/?pasta" alt="Pasta">
+      <h3>Spaghetti Bolognese</h3>
+      <p>$9.99</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>About Us</h2>
+  <p>Delish Restaurant is your go-to spot for delicious meals prepared with love

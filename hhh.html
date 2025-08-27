@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #354b9c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #2e3a74;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    .section {
+      padding: 30px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #354b9c;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>StudyHub</h1>
+    <p>Your Smart Student Companion</p>
+  </header>
+
+  <nav>
+    <a href="#notes">Notes</a>
+    <a href="#quizzes">Quizzes</a>
+    <a href="#tips">Study Tips</a>
+    <a href="#past">Past Questions</a>
+  </nav>
+
+  <section id="notes" class="section">
+    <h2>Class Notes</h2>
+    <div class="card">
+      <h3>Physics - Work, Energy, and Power</h3>
+      <p>Work is done when a force moves an object over a distance...</p>
+    </div>
+  </section>
+
+  <section id="quizzes" class="section">
+    <h2>Take a Quiz</h2>
+    <div class="card">
+      <button onclick="startQuiz()">Start Basic Quiz</button>
+    </div>
+  </section>
+
+  <section id="tips" class="section">
+    <h2>Study Tips</h2>
+    <div class="card">
+      <ul>
+        <li>Use flashcards to memorize formulas.</li>
+        <li>Take short breaks between study sessions.</li>
+        <li>Teach others what you've learned.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="past" class="section">
+    <h2>Past Questions</h2>
+    <div class="card">
+      <p>Download JAMB 2020 Physics Questions [PDF]</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 StudyHub. All rights reserved.
+  </footer>
+
+  <script>
+    function startQuiz() {
+      alert("Quiz feature coming soon!");
+    }
+  </script>
+</body>
+</html>

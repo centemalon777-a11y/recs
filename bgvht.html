@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Place Order - CrystalPure Water</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4fcff;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #0077aa;
+      text-align: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #0077aa;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #005f88;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Place Your Order</h2>
+
+<form id="orderForm" onsubmit="sendOrder(event)">
+  <label>Full Name</label>
+  <input type="text" id="name" required><br>
+
+  <label>Phone</label>
+  <input type="tel" id="phone" required><br>
+
+  <label>Product</label>
+  <select id="product" required>
+    <option value="">-- Choose --</option>
+    <option value="Sachet Water">Sachet Water</option>
+    <option value="Bottled Water">Bottled Water</option>
+  </select><br>
+
+  <label>Quantity</label>
+  <input type="number" id="quantity" required><br>
+
+  <label>Address</label>
+  <textarea id="address" required></textarea><br>
+
+  <button type="submit">Order on WhatsApp</button>
+</form>
+
+<script>
+  function sendOrder(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const product = document.getElementById('product').value;
+    const quantity = document.getElementById('quantity').value;
+    const address = document.getElementById('address').value;
+
+    const message = `Hello, I want to place an order:
+Name: ${name}
+Phone: ${phone}
+Product: ${product}
+Quantity: ${quantity}
+Address: ${address}`;
+
+    const whatsappNumber = '234707 360 7977'; // replace with your own number
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, '_blank');
+  }
+</script>
+
+
+</body>
+</html>

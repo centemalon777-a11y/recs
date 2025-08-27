@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meal Planner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fefefe;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #2c3e50;
+      color: white;
+    }
+    input[type="text"] {
+      width: 90%;
+      padding: 6px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Weekly Meal Planner</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Meal</th>
+      </tr>
+    </thead>
+    <tbody id="mealTable">
+      <tr><td>Monday</td><td><input type="text" id="mon"></td></tr>
+      <tr><td>Tuesday</td><td><input type="text" id="tue"></td></tr>
+
+<tr><td>Wednesday</td><td><input type="text" id="wed"></td></tr>
+      <tr><td>Thursday</td><td><input type="text" id="thu"></td></tr>
+      <tr><td>Friday</td><td><input type="text" id="fri"></td></tr>
+      <tr><td>Saturday</td><td><input type="text" id="sat"></td></tr>
+      <tr><td>Sunday</td><td><input type="text" id="sun"></td></tr>
+    </tbody>
+  </table>
+
+  <button onclick="savePlan()">Save Plan</button>
+
+  <script>
+    function savePlan() {
+      const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+      let mealPlan = "";
+      days.forEach(day => {
+        const meal = document.getElementById(day).value;
+        mealPlan += day.toUpperCase():{meal}\n;
+      });
+      alert("Your Meal Plan:\n\n" + mealPlan);
+    }
+  </script>
+
+</body>
+</html>
